@@ -15,6 +15,7 @@ const nextJsConfig = {
     appDir: true,
     forceSwcTransforms: true,
   },
+  swcMinify: true,
   webpack: (config, { nextRuntime }) => {
     if (!global.angularCompilerCliLinkerPlugin) throw new Error("No linker plugin available");
     config.resolveLoader.symlinks = false
